@@ -47,20 +47,17 @@ mobileMenu.classList.remove('active');
 });
 });
 
-// Hero Slider - Initialize after DOM loads
-window.addEventListener('DOMContentLoaded', () => {
+// Hero Slider - Initialize immediately
 let currentSlide = 0;
+let autoplayInterval = null;
+let isPaused = false;
+
+function initSlider() {
 const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 const sliderTrack = document.querySelector('.slider-track');
-let autoplayInterval;
-let isPaused = false;
 
-function goToSlide(index) {
-currentSlide = index;
-updateSlider();
-resetAutoplay();
-}
+if (!slides.length || !sliderTrack) return;
 
 function updateSlider() {
 sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -89,51 +86,56 @@ updateSlider();
 }
 
 function startAutoplay() {
-stopAutoplay();
-if (!isPaused) {
-autoplayInterval = setInterval(nextSlide, 6000);
+if (autoplayInterval) {
+clearInterval(autoplayInterval);
 }
+autoplayInterval = setInterval(() => {
+if (!isPaused) {
+nextSlide();
+}
+}, 6000);
 }
 
 function stopAutoplay() {
 if (autoplayInterval) {
 clearInterval(autoplayInterval);
+autoplayInterval = null;
 }
 }
 
-function resetAutoplay() {
+window.goToSlide = function(index) {
+currentSlide = index;
+updateSlider();
 stopAutoplay();
 startAutoplay();
-}
+};
 
-// Pause on hover
 const heroSlider = document.querySelector('.hero-slider');
 if (heroSlider) {
 heroSlider.addEventListener('mouseenter', () => {
 isPaused = true;
-stopAutoplay();
 });
 
 heroSlider.addEventListener('mouseleave', () => {
 isPaused = false;
-startAutoplay();
 });
 }
 
-// Indicator click handlers
 indicators.forEach((indicator, index) => {
 indicator.addEventListener('click', () => {
-goToSlide(index);
+window.goToSlide(index);
 });
 });
 
-// Make goToSlide global for onclick handlers
-window.goToSlide = goToSlide;
-
-// Initialize first slide and start autoplay
 updateSlider();
 startAutoplay();
-});
+}
+
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', initSlider);
+} else {
+initSlider();
+}
 
 // Smooth scroll
 function scrollToSection(id) {
