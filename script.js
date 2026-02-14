@@ -67,13 +67,6 @@ indicator.classList.toggle('active', i === currentSlide);
 slides.forEach((slide, i) => {
 if (i === currentSlide) {
 slide.classList.add('active');
-const img = slide.querySelector('.slide-bg img');
-if (img) {
-img.style.animation = 'none';
-setTimeout(() => {
-img.style.animation = 'zoomIn 10s linear forwards';
-}, 10);
-}
 } else {
 slide.classList.remove('active');
 }
