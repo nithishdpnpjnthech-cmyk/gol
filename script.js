@@ -188,4 +188,28 @@ alert('Thank you for your message! We will get back to you soon.');
 e.target.reset();
 });
 
+// Mobile accordion functions
+function toggleMobileAccordion(btn) {
+const content = btn.nextElementSibling;
+const isActive = btn.classList.contains('active');
+
+// Close all accordions
+document.querySelectorAll('.mobile-accordion-btn').forEach(b => {
+b.classList.remove('active');
+b.nextElementSibling.classList.remove('active');
+});
+
+// Open clicked accordion if it wasn't active
+if (!isActive) {
+btn.classList.add('active');
+content.classList.add('active');
+}
+}
+
+function toggleMobileSubAccordion(btn) {
+const content = btn.nextElementSibling;
+btn.classList.toggle('active');
+content.classList.toggle('active');
+}
+
 
