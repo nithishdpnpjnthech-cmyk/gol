@@ -1,14 +1,15 @@
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
 const navbar = document.getElementById('navbar');
-if (window.scrollY > 50) {
+if (navbar && window.scrollY > 50) {
 navbar.classList.add('scrolled');
-} else {
+} else if (navbar) {
 navbar.classList.remove('scrolled');
 }
 });
 
 // Mega menu nested submenu interaction
+function initMegaMenu() {
 const megaCategories = document.querySelectorAll('.mega-category');
 const megaSubmenus = document.querySelectorAll('.mega-submenu');
 
@@ -29,10 +30,16 @@ targetSubmenu.classList.add('active');
 }
 });
 });
+}
+
+initMegaMenu();
 
 // Mobile menu toggle
+function initMobileMenu() {
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+
+if (!mobileMenuBtn || !mobileMenu) return;
 
 mobileMenuBtn.addEventListener('click', () => {
 mobileMenuBtn.classList.toggle('active');
@@ -46,6 +53,9 @@ mobileMenuBtn.classList.remove('active');
 mobileMenu.classList.remove('active');
 });
 });
+}
+
+initMobileMenu();
 
 // Hero Slider - Initialize immediately
 let currentSlide = 0;
@@ -136,9 +146,12 @@ const element = document.getElementById(id);
 if (element) {
 element.scrollIntoView({ behavior: 'smooth' });
 }
-// Close mobile menu if open
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (mobileMenuBtn && mobileMenu) {
 mobileMenuBtn.classList.remove('active');
 mobileMenu.classList.remove('active');
+}
 }
 
 function scrollToTop(e) {
@@ -153,9 +166,12 @@ e.preventDefault();
 const target = document.querySelector(this.getAttribute('href'));
 if (target) {
 target.scrollIntoView({ behavior: 'smooth' });
-// Close mobile menu if open
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (mobileMenuBtn && mobileMenu) {
 mobileMenuBtn.classList.remove('active');
 mobileMenu.classList.remove('active');
+}
 }
 });
 });
@@ -179,7 +195,9 @@ observer.observe(el);
 });
 
 // Contact form submission
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+contactForm.addEventListener('submit', async (e) => {
 e.preventDefault();
 const formData = new FormData(e.target);
 const data = Object.fromEntries(formData);
@@ -187,6 +205,7 @@ console.log('Form submitted:', data);
 alert('Thank you for your message! We will get back to you soon.');
 e.target.reset();
 });
+}
 
 // Mobile accordion functions
 function toggleMobileAccordion(btn) {
