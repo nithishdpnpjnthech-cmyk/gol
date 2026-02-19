@@ -1,598 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>GOL INFRA - Enterprise IT Infrastructure Solutions</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>GOL INFRA - Enterprise IT Infrastructure Solutions</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="min-h-screen">
-<header id="navbar" class="navbar">
-<div class="container">
-<div class="nav-wrapper">
-<a href="index.html" class="logo">
-<div class="logo-text">GOL INFRA</div>
+  <div class="min-h-screen">
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo">
+<img src="images/logo.png" alt="GOL INFRA" class="logo-img">
 </a>
-<nav class="nav-links" id="navLinks">
-<div class="nav-item dropdown">
-<a href="#solutions" class="nav-link">Solutions <span class="chevron">›</span></a>
-<div class="dropdown-menu mega-menu">
-<div class="mega-menu-left">
-<div class="mega-category" data-category="digital-workspace">
-<span class="category-title">Digital Workspace <span class="arrow">→</span></span>
-</div>
-<div class="mega-category" data-category="it-infrastructure">
-<span class="category-title">IT Infrastructure <span class="arrow">→</span></span>
-</div>
-<div class="mega-category" data-category="av-integration">
-<span class="category-title">AV Integration <span class="arrow">→</span></span>
-</div>
-<div class="mega-category" data-category="streaming-recording">
-<span class="category-title">Streaming & Recording <span class="arrow">→</span></span>
-</div>
-<div class="mega-category" data-category="live-broadcasting">
-<span class="category-title">Live Broadcasting <span class="arrow">→</span></span>
-</div>
-<div class="mega-category" data-category="manpower">
-<span class="category-title">Manpower Support <span class="arrow">→</span></span>
-</div>
-<div class="mega-category" data-category="isp">
-<span class="category-title">ISP Business Solutions <span class="arrow">→</span></span>
-</div>
-</div>
-<div class="mega-menu-right">
-<div class="mega-submenu" id="digital-workspace">
-<div class="submenu-col">
-<h4>Digital Workspace Solutions</h4>
-<ul>
-<li><a href="solutions/device-management.html">Device Management</a></li>
-<li><a href="solutions/identity-access-management.html">Identity & Access Management</a></li>
-<li><a href="solutions/vdi.html">Virtual Desktop Infrastructure (VDI)</a></li>
-<li><a href="solutions/collaboration-communication.html">Collaboration & Communication</a></li>
-<li><a href="solutions/cloud-storage.html">Cloud Storage & File Management</a></li>
-<li><a href="solutions/security-endpoint.html">Security & Endpoint Protection</a></li>
-<li><a href="solutions/application-delivery.html">Application Delivery</a></li>
-<li><a href="solutions/network-remote-access.html">Network & Remote Access</a></li>
-<li><a href="solutions/monitoring-support.html">Monitoring & Support</a></li>
-</ul>
-</div>
-</div>
-<div class="mega-submenu" id="it-infrastructure">
-<div class="submenu-col">
-<h4>IT Infrastructure Solutions</h4>
-<ul>
-<li><a href="solutions/passive-networking.html">Passive Networking</a></li>
-<li><a href="solutions/active-networking.html">Active Networking</a></li>
-<li><a href="solutions/telecommunications.html">Telecommunications</a></li>
-<li><a href="solutions/cctv-surveillance.html">Surveillance Solutions</a></li>
-</ul>
-</div>
-</div>
-<div class="mega-submenu" id="av-integration">
-<div class="submenu-col">
-<h4>AV Integration Solutions</h4>
-<ul>
-<li><a href="solutions/conference-room.html">Conference Room AV Solutions</a></li>
-<li><a href="solutions/boardroom.html">Live Boardroom Solutions</a></li>
-<li><a href="solutions/video-walls.html">LED Walls</a></li>
-<li><a href="solutions/iot-automation.html">Intelligent IoT</a></li>
-<li><a href="solutions/auditorium.html">Auditorium AV Solutions</a></li>
-<li><a href="solutions/training-room.html">Training Space AV Solutions</a></li>
-</ul>
-</div>
-</div>
-<div class="mega-submenu" id="streaming-recording">
-<div class="submenu-col">
-<h4>Streaming & Recording Solutions</h4>
-<ul>
-<li><a href="solutions/streaming-recording.html">Streaming & Recording</a></li>
-</ul>
-</div>
-</div>
-<div class="mega-submenu" id="live-broadcasting">
-<div class="submenu-col">
-<h4>Live Broadcasting Solutions</h4>
-<ul>
-<li><a href="solutions/live-broadcasting.html">Live Broadcasting</a></li>
-</ul>
-</div>
-</div>
-<div class="mega-submenu" id="manpower">
-<div class="submenu-col">
-<h4>Manpower Support Solutions</h4>
-<ul>
-<li><a href="solutions/it-manpower-outsourcing.html">IT Manpower Outsourcing</a></li>
-<li><a href="solutions/onsite-remote-support.html">Onsite & Remote Support Engineers</a></li>
-<li><a href="solutions/amc-managed-services.html">AMC & Managed Services</a></li>
-</ul>
-</div>
-</div>
-<div class="mega-submenu" id="isp">
-<div class="submenu-col">
-<h4>ISP Business Solutions</h4>
-<ul>
-<li><a href="solutions/enterprise-internet.html">Enterprise Internet Solutions</a></li>
-<li><a href="solutions/dedicated-lease-lines.html">Dedicated Lease Lines</a></li>
-<li><a href="solutions/managed-network-services.html">Managed Network Services</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="nav-item dropdown">
-<a href="leasing/network-equipment.html" class="nav-link">Leasing <span class="chevron">›</span></a>
-<div class="dropdown-menu">
-<div class="submenu-col">
-<h4>Equipment Leasing Solutions</h4>
-<ul>
-<li><a href="leasing/network-equipment.html">Network Equipment</a></li>
-<li><a href="leasing/security-appliances.html">Security Appliances</a></li>
-<li><a href="leasing/wireless-solutions.html">Wireless Solutions</a></li>
-<li><a href="leasing/surveillance-systems.html">Surveillance Systems</a></li>
-<li><a href="leasing/infrastructure-cabling.html">Infrastructure & Cabling</a></li>
-<li><a href="leasing/enterprise-hardware.html">Enterprise Hardware</a></li>
-</ul>
-</div>
-</div>
-</div>
-<a href="#events" class="nav-link">Events</a>
-<a href="careers.html" class="nav-link">Careers</a>
-<a href="about.html" class="nav-link">About Us</a>
-<a href="experts.html" class="btn-primary">Talk to Our Experts</a>
-</nav>
-<button class="mobile-menu-btn" id="mobileMenuBtn">
-<span class="hamburger"></span>
-</button>
-</div>
-</div>
-</header>
-<div id="mobileMenu" class="mobile-menu">
-<div class="mobile-menu-content">
-<div class="mobile-accordion">
-<button class="mobile-accordion-btn" onclick="toggleMobileAccordion(this)">
-Solutions <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-accordion-content">
-<div class="mobile-sub-accordion">
-<button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
-Digital Workspace <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-sub-accordion-content">
-<a href="solutions/device-management.html" class="mobile-sub-link">Device Management</a>
-<a href="solutions/identity-access-management.html" class="mobile-sub-link">Identity & Access Management</a>
-<a href="solutions/vdi.html" class="mobile-sub-link">VDI</a>
-<a href="solutions/collaboration-communication.html" class="mobile-sub-link">Collaboration & Communication</a>
-<a href="solutions/cloud-storage.html" class="mobile-sub-link">Cloud Storage</a>
-<a href="solutions/security-endpoint.html" class="mobile-sub-link">Security & Endpoint</a>
-</div>
-</div>
-<div class="mobile-sub-accordion">
-<button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
-IT Infrastructure <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-sub-accordion-content">
-<a href="solutions/passive-networking.html" class="mobile-sub-link">Passive Networking</a>
-<a href="solutions/active-networking.html" class="mobile-sub-link">Active Networking</a>
-<a href="solutions/telecommunications.html" class="mobile-sub-link">Telecommunications</a>
-<a href="solutions/cctv-surveillance.html" class="mobile-sub-link">Surveillance</a>
-</div>
-</div>
-<div class="mobile-sub-accordion">
-<button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
-AV Integration <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-sub-accordion-content">
-<a href="solutions/conference-room.html" class="mobile-sub-link">Conference Room</a>
-<a href="solutions/boardroom.html" class="mobile-sub-link">Boardroom</a>
-<a href="solutions/video-walls.html" class="mobile-sub-link">LED Walls</a>
-<a href="solutions/auditorium.html" class="mobile-sub-link">Auditorium</a>
-</div>
-</div>
-<div class="mobile-sub-accordion">
-<button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
-Manpower Support <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-sub-accordion-content">
-<a href="solutions/it-manpower-outsourcing.html" class="mobile-sub-link">IT Manpower</a>
-<a href="solutions/onsite-remote-support.html" class="mobile-sub-link">Onsite Support</a>
-<a href="solutions/amc-managed-services.html" class="mobile-sub-link">AMC Services</a>
-</div>
-</div>
-<div class="mobile-sub-accordion">
-<button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
-ISP Solutions <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-sub-accordion-content">
-<a href="solutions/enterprise-internet.html" class="mobile-sub-link">Enterprise Internet</a>
-<a href="solutions/dedicated-lease-lines.html" class="mobile-sub-link">Lease Lines</a>
-<a href="solutions/managed-network-services.html" class="mobile-sub-link">Managed Network</a>
-</div>
-</div>
-</div>
-</div>
-<div class="mobile-accordion">
-<button class="mobile-accordion-btn" onclick="toggleMobileAccordion(this)">
-Leasing <span class="mobile-chevron">›</span>
-</button>
-<div class="mobile-accordion-content">
-<a href="leasing/network-equipment.html" class="mobile-sub-link">Network Equipment</a>
-<a href="leasing/security-appliances.html" class="mobile-sub-link">Security Appliances</a>
-<a href="leasing/wireless-solutions.html" class="mobile-sub-link">Wireless Solutions</a>
-<a href="leasing/surveillance-systems.html" class="mobile-sub-link">Surveillance Systems</a>
-<a href="leasing/infrastructure-cabling.html" class="mobile-sub-link">Infrastructure & Cabling</a>
-<a href="leasing/enterprise-hardware.html" class="mobile-sub-link">Enterprise Hardware</a>
-</div>
-</div>
-<a href="#events" class="mobile-link">Events</a>
-<a href="#careers" class="mobile-link">Careers</a>
-<a href="about.html" class="mobile-link">About Us</a>
-<a href="experts.html" class="btn-primary w-full">Talk to Our Experts</a>
-</div>
-</div>
-<div class="hero-slider" id="heroSlider">
-<div class="slider-track">
-<div class="slide active">
-<div class="slide-bg">
-<div class="slide-overlay"></div>
-<img src="images/hero-it-new.jpg" alt="IT Infrastructure" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
-</div>
-<div class="slide-content container">
-<div class="badge"><span class="pulse"></span>IT Infrastructure</div>
-<h1 class="slide-title">Integrated IT Infrastructure</h1>
-<p class="slide-subtitle">Building the digital backbone for modern enterprises</p>
-<div class="slide-buttons">
-<button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
-<button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
-</div>
-</div>
-</div>
-<div class="slide">
-<div class="slide-bg">
-<div class="slide-overlay"></div>
-<img src="images/hero-av-new.jpg" alt="AV Integration" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
-</div>
-<div class="slide-content container">
-<div class="badge"><span class="pulse"></span>AV Integration</div>
-<h1 class="slide-title">Advanced AV Integration</h1>
-<p class="slide-subtitle">Immersive audio-visual experiences for collaborative spaces</p>
-<div class="slide-buttons">
-<button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
-<button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
-</div>
-</div>
-</div>
-<div class="slide">
-<div class="slide-bg">
-<div class="slide-overlay"></div>
-<img src="images/hero-security-new.jpg" alt="Security" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
-</div>
-<div class="slide-content container">
-<div class="badge"><span class="pulse"></span>Security Solutions</div>
-<h1 class="slide-title">Intelligent Surveillance</h1>
-<p class="slide-subtitle">Next-generation security protecting your assets 24/7</p>
-<div class="slide-buttons">
-<button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
-<button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
-</div>
-</div>
-</div>
-<div class="slide">
-<div class="slide-bg">
-<div class="slide-overlay"></div>
-<img src="images/hero-isp-new.jpg" alt="ISP" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
-</div>
-<div class="slide-content container">
-<div class="badge"><span class="pulse"></span>ISP Solutions</div>
-<h1 class="slide-title">Enterprise Connectivity</h1>
-<p class="slide-subtitle">High-speed ISP solutions keeping your business online</p>
-<div class="slide-buttons">
-<button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
-<button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
-</div>
-</div>
-</div>
-<div class="slide">
-<div class="slide-bg">
-<div class="slide-overlay"></div>
-<img src="images/hero-startup-new.jpg" alt="Startup" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
-</div>
-<div class="slide-content container">
-<div class="badge"><span class="pulse"></span>Startup India</div>
-<h1 class="slide-title">Startup India Recognized</h1>
-<p class="slide-subtitle">Award-winning innovation and scalability recognized by DPIIT</p>
-<div class="slide-buttons">
-<button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
-<button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
-</div>
-</div>
-</div>
-</div>
-<div class="slider-indicators">
-<button class="indicator active" onclick="goToSlide(0)"></button>
-<button class="indicator" onclick="goToSlide(1)"></button>
-<button class="indicator" onclick="goToSlide(2)"></button>
-<button class="indicator" onclick="goToSlide(3)"></button>
-<button class="indicator" onclick="goToSlide(4)"></button>
-</div>
-</div>
-<section id="startup" class="section bg-card">
-<div class="container">
-<div class="grid-2">
-<div class="animate-on-scroll">
-<div class="section-badge">
-<div class="icon-box"><i data-feather="award"></i></div>
-<h2 class="badge-title">Startup India & DPIIT Recognition</h2>
-</div>
-<h3 class="section-title">Empowering Digital Growth Through Innovation</h3>
-<div class="text-content">
-<p>GOL Infra Pvt. Ltd. is a technology-driven startup focused on delivering innovative, scalable, and integrated infrastructure solutions. We design and implement advanced IT infrastructure, AV integration, surveillance, and telecommunications solutions that address real-world operational challenges.</p>
-<p>Innovation is at the core of our operations. We integrate emerging technologies such as intelligent AV systems, smart surveillance, IoT-enabled infrastructure, and cloud-ready networks to create future-ready solutions. Our approach emphasizes automation, system integration, and optimized performance to deliver measurable value and operational efficiency.</p>
-<p>Our solutions are designed to be modular, scalable, and adaptable to organizations of all sizes. From startups and SMEs to enterprises and government institutions, GOL Infra Pvt. Ltd. delivers solutions that grow with evolving business needs, supporting digital expansion and long-term sustainability.</p>
-</div>
-<div class="grid-2 mt-4">
-<div class="info-card">
-<h4>DPIIT Recognized</h4>
-<p>Certified Innovation</p>
-</div>
-<div class="info-card">
-<h4>Scale-Focused</h4>
-<p>Future-Ready Architecture</p>
-</div>
-</div>
-</div>
-<div class="animate-on-scroll">
-<div class="glass-card">
-<h4 class="card-title">Alignment with Digital Initiatives</h4>
-<div class="initiatives">
-<div class="initiative-item">
-<div class="initiative-icon">✓</div>
-<div>
-<h5>Digital India</h5>
-<p>Enabling smart connectivity and secure digital infrastructure.</p>
-</div>
-</div>
-<div class="initiative-item">
-<div class="initiative-icon">✓</div>
-<div>
-<h5>Smart Cities</h5>
-<p>Supporting urban transformation through intelligent systems.</p>
-</div>
-</div>
-<div class="initiative-item">
-<div class="initiative-icon">✓</div>
-<div>
-<h5>Make in India</h5>
-<p>Developing indigenous technology solutions for global standards.</p>
-</div>
-</div>
-</div>
-<div class="quote">
-<p>"Our vision is to build a technology-driven enterprise that drives digital transformation and creates long-term value for the broader ecosystem."</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="solutions" class="section">
-<div class="container">
-<div class="text-center animate-on-scroll">
-<h2 class="section-badge-text">Our Expertise</h2>
-<h3 class="section-title">Comprehensive IT Solutions</h3>
-<p class="section-desc">We deliver end-to-end infrastructure services tailored for modern enterprises, ensuring efficiency, security, and scalability.</p>
-</div>
-<div class="grid-3 mt-8">
-<div class="solution-card animate-on-scroll">
-<div class="solution-icon-img">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=100&h=100&fit=crop&q=80" alt="AV Integration">
-</div>
-<h4>AV Integration</h4>
-<p>Boardrooms, auditoriums, and digital signage solutions with state-of-the-art visual fidelity.</p>
-</div>
-<div class="solution-card animate-on-scroll">
-<div class="solution-icon-img">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=100&h=100&fit=crop&q=80" alt="IT Infrastructure">
-</div>
-<h4>IT Infrastructure</h4>
-<p>Robust networking, server management, and data center solutions for seamless operations.</p>
-</div>
-<div class="solution-card animate-on-scroll">
-<div class="solution-icon-img">
-<img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=100&h=100&fit=crop&q=80" alt="Smart Surveillance">
-</div>
-<h4>Smart Surveillance</h4>
-<p>AI-powered CCTV, access control, and perimeter security for complete peace of mind.</p>
-</div>
-<div class="solution-card animate-on-scroll">
-<div class="solution-icon-img">
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop&q=80" alt="Enterprise ISP">
-</div>
-<h4>Enterprise ISP</h4>
-<p>Dedicated leased lines and high-bandwidth connectivity solutions for businesses.</p>
-</div>
-<div class="solution-card animate-on-scroll">
-<div class="solution-icon-img">
-<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=100&h=100&fit=crop&q=80" alt="Manpower Support">
-</div>
-<h4>Manpower Support</h4>
-<p>Skilled technical staffing and facility management services.</p>
-</div>
-<div class="solution-card animate-on-scroll">
-<div class="solution-icon-img">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop&q=80" alt="Digital Workplace">
-</div>
-<h4>Digital Workplace</h4>
-<p>Unified communications and collaboration tools for the hybrid workforce.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="industries" class="section bg-secondary">
-<div class="container">
-<div class="grid-2 items-center">
-<div class="animate-on-scroll">
-<h2 class="section-badge-text">Industries</h2>
-<h3 class="section-title">Powering Sectors That Drive the Economy</h3>
-<p class="text-content">GOL Infra brings specialized domain expertise to critical sectors. From securing government facilities to enabling digital classrooms, our impact is widespread.</p>
-<div class="grid-2 mt-4">
-<div class="industry-item">• Corporate Enterprise</div>
-<div class="industry-item">• Government & PSU</div>
-<div class="industry-item">• Healthcare</div>
-<div class="industry-item">• Education</div>
-<div class="industry-item">• Manufacturing</div>
-<div class="industry-item">• Hospitality</div>
-</div>
-</div>
-<div class="animate-on-scroll">
-<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Industries" class="rounded-img">
-</div>
-</div>
-</div>
-</section>
-<section id="innovation" class="section">
-<div class="container">
-<div class="text-center animate-on-scroll">
-<h2 class="section-badge-text">Why GOL Infra</h2>
-<h3 class="section-title">Innovation at Core</h3>
-</div>
-<div class="grid-3 mt-8">
-<div class="innovation-card animate-on-scroll">
-<div class="innovation-icon"><i data-feather="zap"></i></div>
-<h4>Future-Ready Tech</h4>
-<p>We integrate IoT, AI, and Cloud capabilities into traditional infrastructure.</p>
-</div>
-<div class="innovation-card animate-on-scroll">
-<div class="innovation-icon"><i data-feather="check-circle"></i></div>
-<h4>Govt. Compliant</h4>
-<p>Aligned with Digital India and Smart City initiatives with full regulatory compliance.</p>
-</div>
-<div class="innovation-card animate-on-scroll">
-<div class="innovation-icon"><i data-feather="headphones"></i></div>
-<h4>24/7 Support</h4>
-<p>Dedicated support teams ensuring maximum uptime for your critical operations.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="contact" class="section">
-<div class="container">
-<div class="grid-2 gap-large">
-<div class="animate-on-scroll">
-<h2 class="section-badge-text accent">Get In Touch</h2>
-<h3 class="section-title-large">Ready to Transform Your Infrastructure?</h3>
-<p class="text-content-large">Schedule a consultation with our experts. We analyze your needs and propose scalable, future-proof solutions.</p>
-<div class="process-steps">
-<div class="process-step">
-<div class="step-number">1</div>
-<div>
-<h4>Consultation</h4>
-<p>We discuss your requirements and challenges.</p>
-</div>
-</div>
-<div class="process-step">
-<div class="step-number">2</div>
-<div>
-<h4>Proposal</h4>
-<p>We design a custom solution with technical specs.</p>
-</div>
-</div>
-<div class="process-step">
-<div class="step-number">3</div>
-<div>
-<h4>Implementation</h4>
-<p>Seamless deployment and handover.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="animate-on-scroll">
-<div class="contact-form-wrapper">
-<h3 class="form-title">Send us a message</h3>
-<form id="contactForm" class="contact-form">
-<div class="form-row">
-<div class="form-group">
-<label>Full Name</label>
-<input type="text" name="name" placeholder="John Doe" required>
-</div>
-<div class="form-group">
-<label>Email Address</label>
-<input type="email" name="email" placeholder="john@company.com" required>
-</div>
-</div>
-<div class="form-group">
-<label>Subject</label>
-<input type="text" name="subject" placeholder="Project Inquiry" required>
-</div>
-<div class="form-group">
-<label>Message</label>
-<textarea name="message" placeholder="Tell us about your requirements..." rows="5" required></textarea>
-</div>
-<button type="submit" class="btn-primary btn-lg w-full">Send Message →</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</section>
-<footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div>
-<a href="index.html" class="footer-logo">
-<div class="footer-logo-text">GOL INFRA</div>
+          <nav class="nav-links" id="navLinks">
+            <div class="nav-item dropdown">
+              <a href="#solutions" class="nav-link">Solutions <span class="chevron">›</span></a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-menu-left">
+                  <div class="mega-category" data-category="digital-workspace">
+                    <span class="category-title">Digital Workspace <span class="arrow">→</span></span>
+                  </div>
+                  <div class="mega-category" data-category="it-infrastructure">
+                    <span class="category-title">IT Infrastructure <span class="arrow">→</span></span>
+                  </div>
+                  <div class="mega-category" data-category="av-integration">
+                    <span class="category-title">AV Integration <span class="arrow">→</span></span>
+                  </div>
+                  <div class="mega-category" data-category="streaming-recording">
+                    <span class="category-title">Streaming & Recording <span class="arrow">→</span></span>
+                  </div>
+                  <div class="mega-category" data-category="live-broadcasting">
+                    <span class="category-title">Live Broadcasting <span class="arrow">→</span></span>
+                  </div>
+                  <div class="mega-category" data-category="manpower">
+                    <span class="category-title">Manpower Support <span class="arrow">→</span></span>
+                  </div>
+                  <div class="mega-category" data-category="isp">
+                    <span class="category-title">ISP Business Solutions <span class="arrow">→</span></span>
+                  </div>
+                </div>
+                <div class="mega-menu-right">
+                  <div class="mega-submenu" id="digital-workspace">
+                    <div class="submenu-col">
+                      <h4>Digital Workspace Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/device-management.html">Device Management</a></li>
+                        <li><a href="solutions/identity-access-management.html">Identity & Access Management</a></li>
+                        <li><a href="solutions/vdi.html">Virtual Desktop Infrastructure (VDI)</a></li>
+                        <li><a href="solutions/collaboration-communication.html">Collaboration & Communication</a></li>
+                        <li><a href="solutions/cloud-storage.html">Cloud Storage & File Management</a></li>
+                        <li><a href="solutions/security-endpoint.html">Security & Endpoint Protection</a></li>
+                        <li><a href="solutions/application-delivery.html">Application Delivery</a></li>
+                        <li><a href="solutions/network-remote-access.html">Network & Remote Access</a></li>
+                        <li><a href="solutions/monitoring-support.html">Monitoring & Support</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-submenu" id="it-infrastructure">
+                    <div class="submenu-col">
+                      <h4>IT Infrastructure Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/passive-networking.html">Passive Networking</a></li>
+                        <li><a href="solutions/active-networking.html">Active Networking</a></li>
+                        <li><a href="solutions/telecommunications.html">Telecommunications</a></li>
+                        <li><a href="solutions/cctv-surveillance.html">Surveillance Solutions</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-submenu" id="av-integration">
+                    <div class="submenu-col">
+                      <h4>AV Integration Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/conference-room.html">Conference Room AV Solutions</a></li>
+                        <li><a href="solutions/boardroom.html">Live Boardroom Solutions</a></li>
+                        <li><a href="solutions/video-walls.html">LED Walls</a></li>
+                        <li><a href="solutions/iot-automation.html">Intelligent IoT</a></li>
+                        <li><a href="solutions/auditorium.html">Auditorium AV Solutions</a></li>
+                        <li><a href="solutions/training-room.html">Training Space AV Solutions</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-submenu" id="streaming-recording">
+                    <div class="submenu-col">
+                      <h4>Streaming & Recording Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/streaming-recording.html">Streaming & Recording</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-submenu" id="live-broadcasting">
+                    <div class="submenu-col">
+                      <h4>Live Broadcasting Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/live-broadcasting.html">Live Broadcasting</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-submenu" id="manpower">
+                    <div class="submenu-col">
+                      <h4>Manpower Support Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/it-manpower-outsourcing.html">IT Manpower Outsourcing</a></li>
+                        <li><a href="solutions/onsite-remote-support.html">Onsite & Remote Support Engineers</a></li>
+                        <li><a href="solutions/amc-managed-services.html">AMC & Managed Services</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-submenu" id="isp">
+                    <div class="submenu-col">
+                      <h4>ISP Business Solutions</h4>
+                      <ul>
+                        <li><a href="solutions/enterprise-internet.html">Enterprise Internet Solutions</a></li>
+                        <li><a href="solutions/dedicated-lease-lines.html">Dedicated Lease Lines</a></li>
+                        <li><a href="solutions/managed-network-services.html">Managed Network Services</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="leasing/network-equipment.html" class="nav-link">Leasing <span class="chevron">›</span></a>
+              <div class="dropdown-menu">
+                <div class="submenu-col">
+                  <h4>Equipment Leasing Solutions</h4>
+                  <ul>
+                    <li><a href="leasing/network-equipment.html">Network Equipment</a></li>
+                    <li><a href="leasing/security-appliances.html">Security Appliances</a></li>
+                    <li><a href="leasing/wireless-solutions.html">Wireless Solutions</a></li>
+                    <li><a href="leasing/surveillance-systems.html">Surveillance Systems</a></li>
+                    <li><a href="leasing/infrastructure-cabling.html">Infrastructure & Cabling</a></li>
+                    <li><a href="leasing/enterprise-hardware.html">Enterprise Hardware</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="#events" class="nav-link">Events</a>
+            <a href="careers.html" class="nav-link">Careers</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="experts.html" class="btn-primary">Talk to Our Experts</a>
+          </nav>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-content">
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-btn" onclick="toggleMobileAccordion(this)">
+            Solutions <span class="mobile-chevron">›</span>
+          </button>
+          <div class="mobile-accordion-content">
+            <div class="mobile-sub-accordion">
+              <button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
+                Digital Workspace <span class="mobile-chevron">›</span>
+              </button>
+              <div class="mobile-sub-accordion-content">
+                <a href="solutions/device-management.html" class="mobile-sub-link">Device Management</a>
+                <a href="solutions/identity-access-management.html" class="mobile-sub-link">Identity & Access
+                  Management</a>
+                <a href="solutions/vdi.html" class="mobile-sub-link">VDI</a>
+                <a href="solutions/collaboration-communication.html" class="mobile-sub-link">Collaboration &
+                  Communication</a>
+                <a href="solutions/cloud-storage.html" class="mobile-sub-link">Cloud Storage</a>
+                <a href="solutions/security-endpoint.html" class="mobile-sub-link">Security & Endpoint</a>
+              </div>
+            </div>
+            <div class="mobile-sub-accordion">
+              <button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
+                IT Infrastructure <span class="mobile-chevron">›</span>
+              </button>
+              <div class="mobile-sub-accordion-content">
+                <a href="solutions/passive-networking.html" class="mobile-sub-link">Passive Networking</a>
+                <a href="solutions/active-networking.html" class="mobile-sub-link">Active Networking</a>
+                <a href="solutions/telecommunications.html" class="mobile-sub-link">Telecommunications</a>
+                <a href="solutions/cctv-surveillance.html" class="mobile-sub-link">Surveillance</a>
+              </div>
+            </div>
+            <div class="mobile-sub-accordion">
+              <button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
+                AV Integration <span class="mobile-chevron">›</span>
+              </button>
+              <div class="mobile-sub-accordion-content">
+                <a href="solutions/conference-room.html" class="mobile-sub-link">Conference Room</a>
+                <a href="solutions/boardroom.html" class="mobile-sub-link">Boardroom</a>
+                <a href="solutions/video-walls.html" class="mobile-sub-link">LED Walls</a>
+                <a href="solutions/auditorium.html" class="mobile-sub-link">Auditorium</a>
+              </div>
+            </div>
+            <div class="mobile-sub-accordion">
+              <button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
+                Manpower Support <span class="mobile-chevron">›</span>
+              </button>
+              <div class="mobile-sub-accordion-content">
+                <a href="solutions/it-manpower-outsourcing.html" class="mobile-sub-link">IT Manpower</a>
+                <a href="solutions/onsite-remote-support.html" class="mobile-sub-link">Onsite Support</a>
+                <a href="solutions/amc-managed-services.html" class="mobile-sub-link">AMC Services</a>
+              </div>
+            </div>
+            <div class="mobile-sub-accordion">
+              <button class="mobile-sub-accordion-btn" onclick="toggleMobileSubAccordion(this)">
+                ISP Solutions <span class="mobile-chevron">›</span>
+              </button>
+              <div class="mobile-sub-accordion-content">
+                <a href="solutions/enterprise-internet.html" class="mobile-sub-link">Enterprise Internet</a>
+                <a href="solutions/dedicated-lease-lines.html" class="mobile-sub-link">Lease Lines</a>
+                <a href="solutions/managed-network-services.html" class="mobile-sub-link">Managed Network</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-btn" onclick="toggleMobileAccordion(this)">
+            Leasing <span class="mobile-chevron">›</span>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="leasing/network-equipment.html" class="mobile-sub-link">Network Equipment</a>
+            <a href="leasing/security-appliances.html" class="mobile-sub-link">Security Appliances</a>
+            <a href="leasing/wireless-solutions.html" class="mobile-sub-link">Wireless Solutions</a>
+            <a href="leasing/surveillance-systems.html" class="mobile-sub-link">Surveillance Systems</a>
+            <a href="leasing/infrastructure-cabling.html" class="mobile-sub-link">Infrastructure & Cabling</a>
+            <a href="leasing/enterprise-hardware.html" class="mobile-sub-link">Enterprise Hardware</a>
+          </div>
+        </div>
+        <a href="#events" class="mobile-link">Events</a>
+        <a href="#careers" class="mobile-link">Careers</a>
+        <a href="about.html" class="mobile-link">About Us</a>
+        <a href="experts.html" class="btn-primary w-full">Talk to Our Experts</a>
+      </div>
+    </div>
+    <div class="hero-slider" id="heroSlider">
+      <div class="slider-track">
+        <div class="slide active">
+          <div class="slide-bg">
+            <div class="slide-overlay"></div>
+            <img src="images/hero-it-new.jpg" alt="IT Infrastructure"
+              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
+          </div>
+          <div class="slide-content container">
+            <div class="badge"><span class="pulse"></span>IT Infrastructure</div>
+            <h1 class="slide-title">Integrated IT Infrastructure</h1>
+            <p class="slide-subtitle">Building the digital backbone for modern enterprises</p>
+            <div class="slide-buttons">
+              <button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
+              <button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-bg">
+            <div class="slide-overlay"></div>
+            <img src="images/hero-av-new.jpg" alt="AV Integration"
+              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
+          </div>
+          <div class="slide-content container">
+            <div class="badge"><span class="pulse"></span>AV Integration</div>
+            <h1 class="slide-title">Advanced AV Integration</h1>
+            <p class="slide-subtitle">Immersive audio-visual experiences for collaborative spaces</p>
+            <div class="slide-buttons">
+              <button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
+              <button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-bg">
+            <div class="slide-overlay"></div>
+            <img src="images/hero-security-new.jpg" alt="Security"
+              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
+          </div>
+          <div class="slide-content container">
+            <div class="badge"><span class="pulse"></span>Security Solutions</div>
+            <h1 class="slide-title">Intelligent Surveillance</h1>
+            <p class="slide-subtitle">Next-generation security protecting your assets 24/7</p>
+            <div class="slide-buttons">
+              <button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
+              <button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-bg">
+            <div class="slide-overlay"></div>
+            <img src="images/hero-isp-new.jpg" alt="ISP"
+              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
+          </div>
+          <div class="slide-content container">
+            <div class="badge"><span class="pulse"></span>ISP Solutions</div>
+            <h1 class="slide-title">Enterprise Connectivity</h1>
+            <p class="slide-subtitle">High-speed ISP solutions keeping your business online</p>
+            <div class="slide-buttons">
+              <button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
+              <button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-bg">
+            <div class="slide-overlay"></div>
+            <img src="images/hero-startup-new.jpg" alt="Startup"
+              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop'">
+          </div>
+          <div class="slide-content container">
+            <div class="badge"><span class="pulse"></span>Startup India</div>
+            <h1 class="slide-title">Startup India Recognized</h1>
+            <p class="slide-subtitle">Award-winning innovation and scalability recognized by DPIIT</p>
+            <div class="slide-buttons">
+              <button class="btn-primary btn-lg" onclick="scrollToSection('contact')">Explore Solutions</button>
+              <button class="btn-outline btn-lg" onclick="scrollToSection('contact')">Contact Us →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-indicators">
+        <button class="indicator active" onclick="goToSlide(0)"></button>
+        <button class="indicator" onclick="goToSlide(1)"></button>
+        <button class="indicator" onclick="goToSlide(2)"></button>
+        <button class="indicator" onclick="goToSlide(3)"></button>
+        <button class="indicator" onclick="goToSlide(4)"></button>
+      </div>
+    </div>
+    <section id="startup" class="section bg-card">
+      <div class="container">
+        <div class="grid-2">
+          <div class="animate-on-scroll">
+            <div class="section-badge">
+              <div class="icon-box"><i data-feather="award"></i></div>
+              <h2 class="badge-title">Startup India & DPIIT Recognition</h2>
+            </div>
+            <h3 class="section-title">Empowering Digital Growth Through Innovation</h3>
+            <div class="text-content">
+              <p>GOL Infra Pvt. Ltd. is a technology-driven startup focused on delivering innovative, scalable, and
+                integrated infrastructure solutions. We design and implement advanced IT infrastructure, AV integration,
+                surveillance, and telecommunications solutions that address real-world operational challenges.</p>
+              <p>Innovation is at the core of our operations. We integrate emerging technologies such as intelligent AV
+                systems, smart surveillance, IoT-enabled infrastructure, and cloud-ready networks to create future-ready
+                solutions. Our approach emphasizes automation, system integration, and optimized performance to deliver
+                measurable value and operational efficiency.</p>
+              <p>Our solutions are designed to be modular, scalable, and adaptable to organizations of all sizes. From
+                startups and SMEs to enterprises and government institutions, GOL Infra Pvt. Ltd. delivers solutions
+                that grow with evolving business needs, supporting digital expansion and long-term sustainability.</p>
+            </div>
+            <div class="grid-2 mt-4">
+              <div class="info-card">
+                <h4>DPIIT Recognized</h4>
+                <p>Certified Innovation</p>
+              </div>
+              <div class="info-card">
+                <h4>Scale-Focused</h4>
+                <p>Future-Ready Architecture</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="glass-card">
+              <h4 class="card-title">Alignment with Digital Initiatives</h4>
+              <div class="initiatives">
+                <div class="initiative-item">
+                  <div class="initiative-icon">✓</div>
+                  <div>
+                    <h5>Digital India</h5>
+                    <p>Enabling smart connectivity and secure digital infrastructure.</p>
+                  </div>
+                </div>
+                <div class="initiative-item">
+                  <div class="initiative-icon">✓</div>
+                  <div>
+                    <h5>Smart Cities</h5>
+                    <p>Supporting urban transformation through intelligent systems.</p>
+                  </div>
+                </div>
+                <div class="initiative-item">
+                  <div class="initiative-icon">✓</div>
+                  <div>
+                    <h5>Make in India</h5>
+                    <p>Developing indigenous technology solutions for global standards.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="quote">
+                <p>"Our vision is to build a technology-driven enterprise that drives digital transformation and creates
+                  long-term value for the broader ecosystem."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="solutions" class="section">
+      <div class="container">
+        <div class="text-center animate-on-scroll">
+          <h2 class="section-badge-text">Our Expertise</h2>
+          <h3 class="section-title">Comprehensive IT Solutions</h3>
+          <p class="section-desc">We deliver end-to-end infrastructure services tailored for modern enterprises,
+            ensuring efficiency, security, and scalability.</p>
+        </div>
+        <div class="grid-3 mt-8">
+          <div class="solution-card animate-on-scroll">
+            <div class="solution-icon-img">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=100&h=100&fit=crop&q=80"
+                alt="AV Integration">
+            </div>
+            <h4>AV Integration</h4>
+            <p>Boardrooms, auditoriums, and digital signage solutions with state-of-the-art visual fidelity.</p>
+          </div>
+          <div class="solution-card animate-on-scroll">
+            <div class="solution-icon-img">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=100&h=100&fit=crop&q=80"
+                alt="IT Infrastructure">
+            </div>
+            <h4>IT Infrastructure</h4>
+            <p>Robust networking, server management, and data center solutions for seamless operations.</p>
+          </div>
+          <div class="solution-card animate-on-scroll">
+            <div class="solution-icon-img">
+              <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=100&h=100&fit=crop&q=80"
+                alt="Smart Surveillance">
+            </div>
+            <h4>Smart Surveillance</h4>
+            <p>AI-powered CCTV, access control, and perimeter security for complete peace of mind.</p>
+          </div>
+          <div class="solution-card animate-on-scroll">
+            <div class="solution-icon-img">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop&q=80"
+                alt="Enterprise ISP">
+            </div>
+            <h4>Enterprise ISP</h4>
+            <p>Dedicated leased lines and high-bandwidth connectivity solutions for businesses.</p>
+          </div>
+          <div class="solution-card animate-on-scroll">
+            <div class="solution-icon-img">
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=100&h=100&fit=crop&q=80"
+                alt="Manpower Support">
+            </div>
+            <h4>Manpower Support</h4>
+            <p>Skilled technical staffing and facility management services.</p>
+          </div>
+          <div class="solution-card animate-on-scroll">
+            <div class="solution-icon-img">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop&q=80"
+                alt="Digital Workplace">
+            </div>
+            <h4>Digital Workplace</h4>
+            <p>Unified communications and collaboration tools for the hybrid workforce.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="industries" class="section bg-secondary">
+      <div class="container">
+        <div class="grid-2 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="section-badge-text">Industries</h2>
+            <h3 class="section-title">Powering Sectors That Drive the Economy</h3>
+            <p class="text-content">GOL Infra brings specialized domain expertise to critical sectors. From securing
+              government facilities to enabling digital classrooms, our impact is widespread.</p>
+            <div class="grid-2 mt-4">
+              <div class="industry-item">• Corporate Enterprise</div>
+              <div class="industry-item">• Government & PSU</div>
+              <div class="industry-item">• Healthcare</div>
+              <div class="industry-item">• Education</div>
+              <div class="industry-item">• Manufacturing</div>
+              <div class="industry-item">• Hospitality</div>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Industries"
+              class="rounded-img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="innovation" class="section">
+      <div class="container">
+        <div class="text-center animate-on-scroll">
+          <h2 class="section-badge-text">Why GOL Infra</h2>
+          <h3 class="section-title">Innovation at Core</h3>
+        </div>
+        <div class="grid-3 mt-8">
+          <div class="innovation-card animate-on-scroll">
+            <div class="innovation-icon"><i data-feather="zap"></i></div>
+            <h4>Future-Ready Tech</h4>
+            <p>We integrate IoT, AI, and Cloud capabilities into traditional infrastructure.</p>
+          </div>
+          <div class="innovation-card animate-on-scroll">
+            <div class="innovation-icon"><i data-feather="check-circle"></i></div>
+            <h4>Govt. Compliant</h4>
+            <p>Aligned with Digital India and Smart City initiatives with full regulatory compliance.</p>
+          </div>
+          <div class="innovation-card animate-on-scroll">
+            <div class="innovation-icon"><i data-feather="headphones"></i></div>
+            <h4>24/7 Support</h4>
+            <p>Dedicated support teams ensuring maximum uptime for your critical operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="grid-2 gap-large">
+          <div class="animate-on-scroll">
+            <h2 class="section-badge-text accent">Get In Touch</h2>
+            <h3 class="section-title-large">Ready to Transform Your Infrastructure?</h3>
+            <p class="text-content-large">Schedule a consultation with our experts. We analyze your needs and propose
+              scalable, future-proof solutions.</p>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-number">1</div>
+                <div>
+                  <h4>Consultation</h4>
+                  <p>We discuss your requirements and challenges.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-number">2</div>
+                <div>
+                  <h4>Proposal</h4>
+                  <p>We design a custom solution with technical specs.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-number">3</div>
+                <div>
+                  <h4>Implementation</h4>
+                  <p>Seamless deployment and handover.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="contact-form-wrapper">
+              <h3 class="form-title">Send us a message</h3>
+              <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="John Doe" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="john@company.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" name="subject" placeholder="Project Inquiry" required>
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea name="message" placeholder="Tell us about your requirements..." rows="5"
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-lg w-full">Send Message →</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html" class="footer-logo">
+<img src="images/logo.png" alt="GOL INFRA" class="logo-img">
 </a>
-<p class="footer-desc">Empowering businesses with cutting-edge IT infrastructure, AV integration, and intelligent security solutions. Recognized by Startup India.</p>
-<div class="social-links">
-<a href="#" class="social-link">in</a>
-<a href="#" class="social-link">tw</a>
-<a href="#" class="social-link">fb</a>
-<a href="#" class="social-link">ig</a>
-</div>
-</div>
-<div>
-<h4 class="footer-title">Solutions</h4>
-<ul class="footer-links">
-<li><a href="#solutions">Digital Workplace</a></li>
-<li><a href="#solutions">AV Integration</a></li>
-<li><a href="#solutions">IT Infrastructure</a></li>
-<li><a href="#solutions">Surveillance</a></li>
-<li><a href="#solutions">Manpower Support</a></li>
-</ul>
-</div>
-<div>
-<h4 class="footer-title">Company</h4>
-<ul class="footer-links">
-<li><a href="about.html">About Us</a></li>
-<li><a href="#careers">Careers</a></li>
-<li><a href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h4 class="footer-title">Contact Us</h4>
-<ul class="footer-contact">
-<li>📍 123 Tech Park, Cyber City, New Delhi, India 110001</li>
-<li>📞 +91 98765 43210</li>
-<li>✉️ contact@golinfra.com</li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 GOL Infra Pvt Ltd. All rights reserved.</p>
-<p>Designed with excellence.</p>
-</div>
-</div>
-</footer>
-</div>
-<script src="script.js"></script>
-<script>
-  feather.replace();
-</script>
+            <p class="footer-desc">Empowering businesses with cutting-edge IT infrastructure, AV integration, and
+              intelligent security solutions. Recognized by Startup India.</p>
+            <div class="social-links">
+              <a href="#" class="social-link">in</a>
+              <a href="#" class="social-link">tw</a>
+              <a href="#" class="social-link">fb</a>
+              <a href="#" class="social-link">ig</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-title">Solutions</h4>
+            <ul class="footer-links">
+              <li><a href="#solutions">Digital Workplace</a></li>
+              <li><a href="#solutions">AV Integration</a></li>
+              <li><a href="#solutions">IT Infrastructure</a></li>
+              <li><a href="#solutions">Surveillance</a></li>
+              <li><a href="#solutions">Manpower Support</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Company</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Contact Us</h4>
+            <ul class="footer-contact">
+              <li>📍 123 Tech Park, Cyber City, New Delhi, India 110001</li>
+              <li>📞 +91 98765 43210</li>
+              <li>✉️ contact@golinfra.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 GOL Infra Pvt Ltd. All rights reserved.</p>
+          <p>Designed with excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    feather.replace();
+  </script>
 </body>
+
 </html>
