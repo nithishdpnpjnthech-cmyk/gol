@@ -53,7 +53,7 @@ h6 {
   right: 0;
   z-index: 1000;
   transition: all 0.3s;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
   background: hsla(36, 33%, 93%, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 2px solid var(--border);
@@ -63,7 +63,7 @@ h6 {
   background: hsla(36, 33%, 93%, 0.98);
   backdrop-filter: blur(20px);
   border-bottom: 2px solid var(--border);
-  padding: 0.75rem 0;
+  padding: 0.4rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -82,7 +82,7 @@ h6 {
 
 .logo-svg,
 .logo-img {
-  height: 60px;
+  height: 100px;
   width: auto;
   transition: transform 0.3s;
   object-fit: contain;
@@ -95,7 +95,7 @@ h6 {
 
 .footer-logo .logo-svg,
 .footer-logo .logo-img {
-  height: 75px;
+  height: 160px;
 }
 
 .logo-text {
@@ -121,7 +121,7 @@ h6 {
 }
 
 .logo-img {
-  height: 65px;
+  height: 100px;
   width: auto;
   transition: transform 0.3s;
 }
@@ -1867,24 +1867,8 @@ h6 {
 }
 
 /* Job Cards */
-.job-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: all 0.3s;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
+/* Consolidate job-card styles later in the file */
 
-.job-card:hover {
-  background: rgba(22, 24, 29, 0.8);
-  border-color: hsla(45, 90%, 40%, 0.3);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
 
 .job-header {
   display: flex;
@@ -2060,21 +2044,8 @@ h6 {
 }
 
 /* Benefits Cards */
-.benefit-card {
-  background: rgba(22, 24, 29, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  transition: all 0.3s;
-}
+/* Consolidate benefit-card styles later in the file */
 
-.benefit-card:hover {
-  background: rgba(22, 24, 29, 0.6);
-  border-color: hsla(45, 90%, 40%, 0.2);
-  transform: translateY(-5px);
-}
 
 .benefit-icon-large {
   width: 4rem;
@@ -2100,7 +2071,7 @@ h6 {
 }
 
 .benefit-card h3 {
-  color: white;
+  color: var(--foreground);
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
@@ -2439,13 +2410,13 @@ h6 {
 .benefit-card {
   background: var(--card);
   border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .benefit-card::before {
@@ -2464,40 +2435,45 @@ h6 {
 }
 
 .benefit-card:hover {
-  background: rgba(22, 24, 29, 0.8);
-  border-color: hsla(45, 90%, 40%, 0.3);
-  transform: translateY(-10px);
+  background: var(--card);
+  border-color: var(--primary);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .benefit-card .benefit-icon {
-  width: 4rem;
-  height: 4rem;
-  background: hsla(45, 90%, 40%, 0.1);
-  border: 1px solid hsla(45, 90%, 40%, 0.3);
-  border-radius: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: hsl(45, 90%, 95%);
+  border: 1px solid hsla(45, 90%, 40%, 0.1);
+  border-radius: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  margin: 0 auto 1.5rem;
-  transition: all 0.3s;
+  margin: 0 auto 2rem;
+  transition: all 0.4s;
 }
 
 .benefit-card:hover .benefit-icon {
   background: var(--primary);
   color: white;
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 10px 20px hsla(45, 90%, 40%, 0.2);
 }
 
 .benefit-card h3 {
   color: var(--foreground);
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .benefit-card p {
   color: var(--muted-foreground);
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .careers-openings {
@@ -2539,12 +2515,15 @@ h6 {
 .job-card {
   background: var(--card);
   border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: all 0.3s;
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .job-card::after {
@@ -2564,10 +2543,10 @@ h6 {
 }
 
 .job-card:hover {
-  background: rgba(22, 24, 29, 0.8);
-  border-color: hsla(45, 90%, 40%, 0.3);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: var(--card);
+  border-color: var(--primary);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .job-header {
@@ -2609,10 +2588,11 @@ h6 {
 }
 
 .job-title {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  color: var(--foreground);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .job-description {
