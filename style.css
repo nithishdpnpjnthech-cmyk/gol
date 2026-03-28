@@ -798,19 +798,31 @@ h6 {
 }
 
 .icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: hsla(45, 90%, 40%, 0.2);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(184, 139, 94, 0.2);
+  overflow: hidden;
 }
 
+.icon-box i,
+.icon-box svg,
+.icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.icon-box i,
 .icon-box svg {
-  width: 24px;
-  height: 24px;
-  color: var(--accent);
+  width: 20px;
+  height: 20px;
 }
 
 .badge-title {
@@ -975,53 +987,87 @@ h6 {
 .solution-card:hover {
   background: var(--card);
   border-color: var(--primary);
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px rgba(184, 139, 94, 0.2), 0 0 20px rgba(184, 139, 94, 0.1);
 }
 
 .solution-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 1rem;
-  background: rgba(15, 118, 110, 0.05);
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  transition: transform 0.3s;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
 }
 
 .solution-card:hover .solution-icon {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.solution-icon i,
+.solution-icon svg,
+.solution-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: transform 0.3s;
+}
+
+.solution-icon i,
+.solution-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.solution-card:hover .solution-icon i,
+.solution-card:hover .solution-icon svg,
+.solution-card:hover .solution-icon img {
   transform: scale(1.1);
 }
 
-.solution-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
 .solution-icon.blue {
-  color: #60a5fa;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.15);
 }
 
 .solution-icon.green {
-  color: hsl(45, 90%, 50%);
+  color: #059669;
+  background: rgba(5, 150, 105, 0.08);
+  border-color: rgba(5, 150, 105, 0.15);
 }
 
 .solution-icon.orange {
-  color: #fb923c;
+  color: #ea580c;
+  background: rgba(234, 88, 12, 0.08);
+  border-color: rgba(234, 88, 12, 0.15);
 }
 
 .solution-icon.purple {
-  color: #a78bfa;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.15);
 }
 
 .solution-icon.pink {
-  color: #f472b6;
+  color: #db2777;
+  background: rgba(219, 39, 119, 0.08);
+  border-color: rgba(219, 39, 119, 0.15);
 }
 
 .solution-icon.yellow {
-  color: #fbbf24;
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.15);
 }
 
 .solution-card h4 {
@@ -1071,16 +1117,44 @@ h6 {
 }
 
 .innovation-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: rgba(15, 118, 110, 0.05);
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  font-size: 2rem;
   margin: 0 auto 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(184, 139, 94, 0.1);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+}
+
+.innovation-card:hover .innovation-icon {
+  transform: translateY(-8px) rotate(5deg);
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(184, 139, 94, 0.25);
+}
+
+.innovation-icon i,
+.innovation-icon svg,
+.innovation-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.innovation-icon i,
+.innovation-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .innovation-card h4 {
@@ -1300,8 +1374,8 @@ h6 {
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-on-scroll.visible {
@@ -1393,6 +1467,13 @@ h6 {
 
   .solution-card {
     padding: 1.5rem;
+  }
+
+  .solution-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 40px rgba(184, 139, 94, 0.2), 0 0 15px rgba(184, 139, 94, 0.1);
+    background: hsla(45, 90%, 40%, 0.05);
   }
 
   .contact-form-wrapper {
@@ -2807,5 +2888,84 @@ h6 {
 
   .job-modal-header h2 {
     font-size: 1.25rem;
+  }
+}
+
+/* Industry Scroll Section */
+.industry-scroll-container {
+  overflow-x: auto;
+  padding: 1rem 0 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.industry-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.industry-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.industry-track {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.industry-card {
+  flex: 0 0 300px;
+  height: 220px;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.industry-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.industry-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.industry-card:hover img {
+  transform: scale(1.1);
+}
+
+.industry-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  transition: background 0.3s;
+}
+
+.industry-card:hover .industry-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+}
+
+.industry-overlay h4 {
+  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .industry-card {
+    flex: 0 0 260px;
+    height: 180px;
   }
 }

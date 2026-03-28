@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Networking Solutions on Lease - GOL INFRA</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-glow: radial-gradient(rgba(218, 165, 32, 0.1), rgba(218, 165, 32, 0));
+        }
+
+        .leasing-hero {
+            position: relative;
+            padding: 12rem 0 8rem;
+            background: #000;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            min-height: 70vh;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            filter: brightness(0.7) contrast(1.1);
+        }
+
+        .leasing-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .leasing-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .leasing-hero p {
+            font-size: 1.5rem;
+            color: var(--muted-foreground);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .benefit-section {
+            padding: 8rem 0;
+            background: var(--background);
+            border-top: 1px solid var(--border);
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .benefit-card {
+            padding: 3rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .benefit-card i {
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.5rem;
+        }
+
+        .example-box {
+            margin-top: 5rem;
+            padding: 4rem;
+            background: linear-gradient(135deg, hsla(45, 90%, 40%, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+            border: 1px dashed var(--primary);
+            border-radius: 2.5rem;
+            text-align: center;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .product-category-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 6rem 0 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .product-category-title span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-category-title:hover span {
+            transform: scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(184, 139, 94, 0.3);
+        }
+
+        .product-category-title span img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1.1);
+        }
+
+        .product-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-item {
+            background: var(--card);
+            border-radius: 1.5rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-image-stack {
+            height: 250px;
+            background: white;
+            position: relative;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image-stack img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .product-content {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .product-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .who-is-for {
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, transparent, rgba(218, 165, 32, 0.05), transparent);
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .who-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .final-cta {
+            padding: 10rem 0;
+            background: #000;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-collage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            display: block;
+        }
+
+        .cta-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .cta-collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-xxl {
+            padding: 1.5rem 4rem;
+            font-size: 1.5rem;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen">
+        <header id="navbar" class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="GOL INFRA" class="logo-img">
+                    </a>
+                    <nav class="nav-links" id="navLinks">
+                        <a href="index.html#solutions" class="nav-link">Solutions</a>
+                        <a href="leasing.html" class="nav-link active">Leasing</a>
+                        <a href="index.html#events" class="nav-link">Blogs</a>
+                        <a href="careers.html" class="nav-link">Careers</a>
+                        <a href="about.html" class="nav-link">About Us</a>
+                        <a href="#" class="nav-link">Partners</a>
+                        <button class="btn-primary" onclick="window.location.href='index.html#contact'">Talk to Our
+                            Experts</button>
+                    </nav>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="index.html#solutions" class="mobile-link">Solutions</a>
+                <a href="leasing.html" class="mobile-link">Leasing</a>
+                <a href="index.html#events" class="mobile-link">Blogs</a>
+                <a href="careers.html" class="mobile-link">Careers</a>
+                <a href="about.html" class="mobile-link">About Us</a>
+                <button class="btn-primary w-full" onclick="window.location.href='index.html#contact'">Talk to Our
+                    Experts</button>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="leasing-hero">
+            <div class="hero-bg-overlay"></div>
+            <img src="images/leasing-hero-bg.png" alt="Data Center Background" class="hero-bg-img">
+            <div class="container">
+                <h1>Enterprise Networking Solutions on Lease</h1>
+                <p>Upgrade your IT infrastructure without heavy upfront investment. Get access to high-performance
+                    networking equipment with flexible leasing options.</p>
+                <div class="hero-ctas">
+                    <button class="btn-primary btn-lg" onclick="window.location.href='index.html#contact'">Get
+                        Quote</button>
+                    <button class="btn-outline btn-lg" onclick="window.location.href='experts.html'">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY LEASING -->
+        <section class="benefit-section">
+            <div class="container">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-badge-text">Why Choose Leasing Instead of Buying?</h2>
+                    <h2 class="section-title">Save Capital & Accelerate Growth</h2>
+                </div>
+
+                <div class="benefit-grid">
+                    <div class="benefit-card animate-on-scroll">
+                        <i data-feather="dollar-sign"></i>
+                        <h3>Financial Flexibility</h3>
+                        <p>Save capital and avoid large upfront costs. Deploy high-end technology without draining your
+                            cash flow.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <i data-feather="refresh-cw"></i>
+                        <h3>Tech Refresh</h3>
+                        <p>Upgrade technology anytime. Stay ahead of the curve by refreshing your hardware as soon as
+                            better versions arrive.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <i data-feather="tool"></i>
+                        <h3>Maintenance Free</h3>
+                        <p>Reduce maintenance burden. We handle the hardware health, so you can focus on your business.
+                        </p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <i data-feather="trending-up"></i>
+                        <h3>Seamless Scaling</h3>
+                        <p>Scale your business easily. Add equipment as you grow without significant debt or capital
+                            hurdles.</p>
+                    </div>
+                </div>
+
+                <div class="example-box animate-on-scroll">
+                    <h3>The Smart Way to Upgrade</h3>
+                    <div class="example-grid">
+                        <div class="ex-buying">
+                            <div class="price-old">₹10 Lakhs</div>
+                            <p>Paid Upfront (Buying)</p>
+                        </div>
+                        <div class="ex-arrow">
+                            <p>OR</p>
+                            <i data-feather="arrow-right"></i>
+                        </div>
+                        <div class="ex-leasing">
+                            <div class="price-new">Low Monthly Payment</div>
+                            <p>Scalable OpEx (Leasing)</p>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-primary font-bold">👉 Upgrade your router in 1 year → Zero loss, constant
+                        performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Our Leasing Products</h2>
+                </div>
+
+                <!-- Routers -->
+                <div class="product-category animate-on-scroll">
+                    <h2 class="product-category-title"><span><img
+                                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=150&h=150&fit=crop&q=80"
+                                alt="Networking Hardware"></span> Routers & Core Networking</h2>
+                    <div class="product-showcase-grid">
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://cdn.moglix.com/p/KSl86vpaug5nR-xxlarge.jpg" alt="MikroTik CCR2004">
+                            </div>
+                            <div class="product-content">
+                                <h3>MikroTik CCR2004-1G-12S+2XS</h3>
+                                <p>High-performance enterprise router built for ISPs, data centers, and large
+                                    businesses. Ideal for high-traffic routing and backbone networks.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://dlcdnwebimgs.asus.com/files/media/202509/5fdc87d5-3305-41c6-bc4b-29d0368b0ae0/v1/img/kv.jpg"
+                                    alt="ROG Router">
+                            </div>
+                            <div class="product-content">
+                                <h3>ROG Router (ASUS Gaming Router)</h3>
+                                <p>Ultra-fast, low-latency router designed for high-performance environments, delivering
+                                    stable and high-speed connectivity.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Switches -->
+                <div class="product-category animate-on-scroll">
+                    <h2 class="product-category-title"><span><img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=150&h=150&fit=crop&q=80"
+                                alt="Switch"></span> Enterprise Switches</h2>
+                    <div class="product-showcase-grid">
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.metapoint.in/assets/upload_images/product/1627125607_2.png"
+                                    alt="Grandstream Switch">
+                            </div>
+                            <div class="product-content">
+                                <h3>Grandstream Layer-3 Managed Switch</h3>
+                                <p>Advanced routing with secure multi-VLAN support for enterprise networks.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://m.media-amazon.com/images/I/617jekhKT4L._AC_UF1000%2C1000_QL80_.jpg"
+                                    alt="Cisco Catalyst 9200">
+                            </div>
+                            <div class="product-content">
+                                <h3>Cisco Catalyst 9200 Series Core Switch</h3>
+                                <p>Enterprise-grade core switching with high performance and scalability.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.metapoint.in/assets/upload_images/product/1626866330_3.png"
+                                    alt="Cisco Catalyst 1300">
+                            </div>
+                            <div class="product-content">
+                                <h3>Cisco Catalyst 1300 Series Managed Switch</h3>
+                                <p>Reliable switching solution for growing business environments.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.metapoint.in/assets/upload_images/product/1626861556_1.png"
+                                    alt="Cisco Catalyst 1000">
+                            </div>
+                            <div class="product-content">
+                                <h3>Cisco Catalyst 1000 Series Access Switch</h3>
+                                <p>Simple, secure, and efficient switching for everyday operations.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="product-category animate-on-scroll">
+                    <h2 class="product-category-title"><span><img
+                                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=150&h=150&fit=crop&q=80"
+                                alt="Security Firewall"></span> Security Solutions</h2>
+                    <div class="product-showcase-grid">
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://m.media-amazon.com/images/I/51EG2z6HgeL._AC_UF1000%2C1000_QL80_.jpg"
+                                    alt="Cisco Firepower">
+                            </div>
+                            <div class="product-content">
+                                <h3>Cisco Firepower 1140 Firewall</h3>
+                                <p>Next-generation firewall offering advanced threat protection and secure connectivity
+                                    across critical infrastructure.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wireless -->
+                <div class="product-category animate-on-scroll">
+                    <h2 class="product-category-title"><span><img
+                                src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=150&h=150"
+                                alt="Wireless Network"></span> Wireless & Connectivity</h2>
+                    <div class="product-showcase-grid">
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.networktigers.com/cdn/shop/files/cisco-MR45-HW-2_7355a4d2-ce15-4a69-9562-1d0630205396_medium.jpg?v=1729451879"
+                                    alt="Cisco Meraki">
+                            </div>
+                            <div class="product-content">
+                                <h3>Cisco Meraki MR45 Access Point</h3>
+                                <p>Cloud-managed Wi-Fi solution with centralized control and high-speed wireless
+                                    performance.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surveillance -->
+                <div class="product-category animate-on-scroll">
+                    <h2 class="product-category-title"><span><img
+                                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=150&h=150&fit=crop&q=80"
+                                alt="CCTV Camera"></span> Surveillance Systems</h2>
+                    <div class="product-showcase-grid">
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.securitastechnology.com/sites/securitastechnology.com/files/media/2021-09/business%20security%20cameras.jpeg"
+                                    alt="IP Cameras">
+                            </div>
+                            <div class="product-content">
+                                <h3>IP Cameras</h3>
+                                <p>High-definition surveillance with real-time monitoring and scalable deployment for
+                                    modern security environments.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.dipol.com.pl/pict/k22360%2B.jpg" alt="NVR">
+                            </div>
+                            <div class="product-content">
+                                <h3>Hikvision NVR 8TB Storage</h3>
+                                <p>Centralized recording system for secure video storage and playback, managing multiple
+                                    cameras efficiently.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="product-category animate-on-scroll">
+                    <h2 class="product-category-title"><span><img
+                                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=150&h=150&fit=crop"
+                                alt="Infrastructure Cabling"></span> Infrastructure & Cabling</h2>
+                    <div class="product-showcase-grid">
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://miro.medium.com/v2/resize%3Afit%3A820/0%2AKsO_c_e6BQlBMc9y.jpg"
+                                    alt="Network Racks">
+                            </div>
+                            <div class="product-content">
+                                <h3>Network Racks</h3>
+                                <p>Secure and organized equipment storage (19U, 6U, 4U, 2U available) with professional
+                                    airflow management.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://www.portronics.com/cdn/shop/files/Portronics_Net_X20_lan_cable_20M_CAT_6_Ethernet_cable_for_high-speed_networking.jpg?v=1765793252&width=1445"
+                                    alt="CAT6">
+                            </div>
+                            <div class="product-content">
+                                <h3>CAT6 & CAT6A Cable</h3>
+                                <p>Reliable high-speed Ethernet connectivity supporting 10G networking for advanced
+                                    infrastructure.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-stack">
+                                <img src="https://m.media-amazon.com/images/I/81dEiTWf7ML._AC_UF1000%2C1000_QL80_.jpg"
+                                    alt="OFC">
+                            </div>
+                            <div class="product-content">
+                                <h3>Optical Fiber Cable (OFC)</h3>
+                                <p>Ultra-fast long-distance data transmission with minimal signal loss for backbone
+                                    connectivity.</p>
+                                <a href="index.html#contact" class="btn-text">Lease Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHO IS THIS FOR -->
+        <section class="who-is-for">
+            <div class="container text-center">
+                <h2 class="section-title">Who Is This For?</h2>
+                <div class="who-grid">
+                    <div class="who-card animate-on-scroll">Small & Medium Businesses</div>
+                    <div class="who-card animate-on-scroll" style="animation-delay: 0.1s">Enterprises & Corporates</div>
+                    <div class="who-card animate-on-scroll" style="animation-delay: 0.2s">Data Centers</div>
+                    <div class="who-card animate-on-scroll" style="animation-delay: 0.3s">ISPs & Telecom Companies</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="section">
+            <div class="container text-center">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <div class="benefit-grid">
+                    <div class="who-card animate-on-scroll">Genuine Enterprise Products</div>
+                    <div class="who-card animate-on-scroll">Flexible Leasing Plans</div>
+                    <div class="who-card animate-on-scroll">End-to-End Support</div>
+                    <div class="who-card animate-on-scroll">Quick Deployment</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta" style="color: white;">
+            <div class="cta-collage">
+                <div class="cta-overlay" style="background: rgba(0, 0, 0, 0.85); z-index: 1;"></div>
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000"
+                    alt="Upgrade Your Network"
+                    style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; z-index: 0;">
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <h2 class="section-badge-text" style="color: var(--primary);">FINAL STEP</h2>
+                <h1 style="color: white;">Ready to Upgrade Your Network?</h1>
+                <p style="color: rgba(255,255,255,0.9);">Lease high-performance networking equipment today and scale
+                    your business without limits.</p>
+                <button class="btn-primary btn-xxl mt-8" onclick="window.location.href='index.html#contact'">Contact Our
+                    Experts Now</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <p>© 2026 GOL Infra Pvt Ltd. Engineered Infrastructure. Structured Execution.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        // Re-initialize scroll observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
